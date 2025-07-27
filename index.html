@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Michelle.Studio 的應用程式官方網站</title>
+  <title>Michelle.Studio ｜App 開發作品集與技術分享的官方網站</title>
+  <meta name="description" content="由 Michelle 開發的 Android App 作品。">
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9654152520693378"
      crossorigin="anonymous"></script>
@@ -35,7 +36,7 @@
       padding: 0 16px;
     }
 
-    .intro {
+    .intro, .product {
       background-color: #fff;
       padding: 24px;
       border-radius: 12px;
@@ -43,25 +44,16 @@
       margin-bottom: 40px;
     }
 
-    .intro h2 {
-      margin-top: 0;
-    }
-
     .product {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      padding: 20px;
-      margin-bottom: 24px;
       gap: 20px;
+      align-items: flex-start;
     }
 
     .product img {
-      width: 96px;
-      height: 96px;
+      width: 128px;
+      height: 128px;
       border-radius: 16px;
       object-fit: cover;
       background-color: #f0f0f0;
@@ -75,8 +67,8 @@
       margin: 0 0 8px;
     }
 
-    .product p {
-      margin: 4px 0;
+    .product ul {
+      padding-left: 20px;
     }
 
     .product a {
@@ -94,7 +86,6 @@
       padding: 24px;
       font-size: 0.9em;
       color: #888;
-      margin-top: 40px;
     }
   </style>
 </head>
@@ -109,7 +100,8 @@
 
   <section class="intro">
     <h2>關於我</h2>
-    <p>你好，我是 Michelle，一位來自台灣的 App 開發者致力於打造實用、美觀且具有影響力的 App。</p>
+    <p>你好，我是 Michelle，一位來自台灣的 App 開發者致力於打造實用、美觀且具有影響力的 Android 應用程式。</p>
+    <p>我喜歡將技術轉化為簡單實用的產品，若你對我的作品感興趣，歡迎聯絡合作！</p>
 
 	<p>在無數個被咖啡染深的深夜裡，</p>
 	<p>伴著一台安靜沉思的微熱筆電</p>
@@ -122,33 +114,52 @@
 	<p>這不是工具，是一段靈感的旅程。</p>
   </section>
 
-  <!-- 📱 App 1 -->
+  <!-- App 1 -->
   <section class="product">
+  <img src="assets/moviemaniax-preview.png" alt="MovieManiaX App 預覽圖">
     <div class="product-content">
       <h3>MovieManiaX</h3>
       <p>MovieManiaX 利用 TMDB 資料庫，提供即時更新的電影預告片，涵蓋即將上映電影、演員資訊及獨家預告。</p>
+      <ul>
+        <li>支援搜尋與收藏預告片</li>
+        <li>演員資料與影史紀錄查詢</li>
+        <li>深色模式 UI，支援 Android 13</li>
+      </ul>
       <p><a href="https://play.google.com/store/apps/details?id=com.developer.moviemaniax" target="_blank">前往 Google Play</a></p>
     </div>
   </section>
+	
+  <!-- App 2  -->
+  <section class="product">
+    <img src="assets/financehealth-preview.png" alt="FinanceHealthX App 預覽圖">
+    <div class="product-content">
+      <h3>📊 FinanceHealthX</h3>
+      <p>一款簡約易用的生活理財 App，協助你管理每日收支、追蹤消費紀錄並自動生成統計報表。</p>
+      <ul>
+        <li>快速記帳與分類標籤</li>
+        <li>支援 CSV 匯出與雲端備份</li>
+        <li>清晰的圓餅圖與月報分析</li>
+      </ul>
+    </div>
+  </section>
 
-</main>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9654152520693378"
-     crossorigin="anonymous"></script>
-
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9654152520693378"
-	     crossorigin="anonymous"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-format="autorelaxed"
-	     data-ad-client="ca-pub-9654152520693378"
-	     data-ad-slot="8341025378"></ins>
-	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({});
-	</script>	
-
+  <!-- App 3  -->
+  <section class="product">
+    <img src="assets/truetypeX-preview.png" alt="TrueTypeX App 預覽圖">
+    <div class="product-content">
+      <h3>TrueTypeX</h3>
+      <p>一款幫助使用者快速辨識、了解自己個性特質的心理測驗 App，結合 MBTI（16 型人格）概念，提供直覺式互動與結果解釋。。</p>
+      <ul>
+        <li>個性測驗互動問答：透過簡單題目問答，判斷你的 MBTI 類型（如 INTJ、ESFP 等）</li>
+        <li>結果分析清晰明瞭：顯示個性類型解釋、優勢劣勢、適合職業、人際關係建議等</li>
+        <li>簡潔風格 UI：使用深色模式與現代介面設計，適合各年齡層閱讀</li>
+        <li>無需登入即可體驗：開啟即測，無需註冊帳號</li>
+      </ul>
+    </div>
+  </section>	
 	
 <!-- 回應式廣告 -->
+<section>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9654152520693378"
@@ -158,6 +169,9 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+ </section>
+</main>
+
 <footer>
   &copy; 2025 Michelle.Studio | 本網站用於展示個人作品與廣告授權。
  <p>
