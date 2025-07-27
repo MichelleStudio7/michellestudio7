@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Michelle.Studio 的應用程式官方網站</title>
+  <title>Michelle.Studio ｜App 開發作品集與技術分享的官方網站</title>
+  <meta name="description" content="由 Michelle 開發的 Android App 作品，包含電影預告、理財記帳與 MBTI 測驗等 App。">
+  <meta name="google-adsense-account" content="ca-pub-9654152520693378">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9654152520693378"
+          crossorigin="anonymous"></script>
+
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
@@ -31,7 +38,7 @@
       padding: 0 16px;
     }
 
-    .intro {
+    .intro, .product {
       background-color: #fff;
       padding: 24px;
       border-radius: 12px;
@@ -39,25 +46,16 @@
       margin-bottom: 40px;
     }
 
-    .intro h2 {
-      margin-top: 0;
-    }
-
     .product {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      padding: 20px;
-      margin-bottom: 24px;
       gap: 20px;
+      align-items: flex-start;
     }
 
     .product img {
-      width: 96px;
-      height: 96px;
+      width: 128px;
+      height: 128px;
       border-radius: 16px;
       object-fit: cover;
       background-color: #f0f0f0;
@@ -71,8 +69,8 @@
       margin: 0 0 8px;
     }
 
-    .product p {
-      margin: 4px 0;
+    .product ul {
+      padding-left: 20px;
     }
 
     .product a {
@@ -85,12 +83,31 @@
       text-decoration: underline;
     }
 
+    .ad-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .ad-label {
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 24px;
       font-size: 0.9em;
       color: #888;
-      margin-top: 40px;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -105,41 +122,78 @@
 
   <section class="intro">
     <h2>關於我</h2>
-    <p>你好，我是 Michelle，一位來自台灣的 App 開發者致力於打造實用、美觀且具有影響力的 App。</p>
-
-	<p>在無數個被咖啡染深的深夜裡，</p>
-	<p>伴著一台安靜沉思的微熱筆電</p>
-	<p>一位對程式碼懷抱浪漫幻想、</p>
-	<p>對界面設計略顯偏執、</p>
-	<p>對使用者體驗始終心存敬意的創作者，</p>
-	<p>在時間與靈感的交織中，</p>
-	<p>慢慢孕育出小小的作品</p>
-	<p>.......</p>
-	<p>這不是工具，是一段靈感的旅程。</p>
+    <p>你好，我是 Michelle，一位來自台灣的 App 開發者，致力於打造實用、美觀且具有影響力的 Android 應用程式。</p>
+    <p>我喜歡將技術轉化為簡單實用的產品，若你對我的作品感興趣，歡迎聯絡合作！</p>
+    <p>這不是工具，是一段靈感的旅程。</p>
   </section>
 
-  <!-- 📱 App 1 -->
+  <!-- App 1 -->
   <section class="product">
+    <img src="assets/moviemaniax-preview.png" alt="MovieManiaX App 預覽圖" loading="lazy">
     <div class="product-content">
-      <h3>MovieManiaX</h3>
-      <p>MovieManiaX 利用 TMDB 資料庫，提供即時更新的電影預告片，涵蓋即將上映電影、演員資訊及獨家預告。</p>
-      <p><a href="https://play.google.com/store/apps/details?id=com.developer.moviemaniax" target="_blank">前往 Google Play</a></p>
+      <h3>🎬 MovieManiaX</h3>
+      <p>MovieManiaX 利用 TMDB 資料庫，提供即時更新的電影預告片、上映資訊與演員介紹。</p>
+      <ul>
+        <li>支援搜尋與收藏預告片</li>
+        <li>演員資料與影史紀錄查詢</li>
+        <li>深色模式 UI，支援 Android 13</li>
+      </ul>
+      <p><a href="https://play.google.com/store/apps/details?id=com.developer.moviemaniax" target="_blank" rel="noopener">前往 Google Play</a></p>
     </div>
   </section>
 
-  <!-- app-ads.txt -->
+  <!-- App 2 -->
   <section class="product">
+    <img src="assets/financehealth-preview.png" alt="FinanceHealthX App 預覽圖" loading="lazy">
     <div class="product-content">
-      <h3>app-ads.txt</h3>
-      <p>廣告授權資料，供 Google AdMob 驗證。</p>
-      <p><a href="app-ads.txt" target="_blank">📄 前往 app-ads.txt</a></p>
+      <h3>📊 FinanceHealthX</h3>
+      <p>一款簡約易用的生活理財 App，協助你管理每日收支、追蹤消費並自動生成圖表分析。</p>
+      <ul>
+        <li>快速記帳與分類標籤</li>
+        <li>支援 CSV 匯出與雲端備份</li>
+        <li>清晰的圓餅圖與月報分析</li>
+      </ul>
     </div>
+  </section>
+
+  <!-- App 3 -->
+  <section class="product">
+    <img src="assets/truetypeX-preview.png" alt="TrueTypeX App 預覽圖" loading="lazy">
+    <div class="product-content">
+      <h3>🧠 TrueTypeX</h3>
+      <p>一款幫助使用者探索個性特質的心理測驗 App，結合 MBTI 16 型人格概念。</p>
+      <ul>
+        <li>互動式 MBTI 測驗題目</li>
+        <li>顯示結果分析、職涯建議與愛情指南</li>
+        <li>深色模式支援，介面現代簡潔</li>
+        <li>無需註冊帳號即可開始測驗</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Google AdSense 廣告區塊 -->
+  <section class="ad-section">
+    <div class="ad-label">— 贊助內容 —</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9654152520693378"
+         data-ad-slot="1967188717"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2025 Michelle.Studio | 本網站用於展示個人作品與廣告授權。
+  &copy; 2025 Michelle.Studio ｜本網站用於展示個人作品與廣告授權。
+  <p>
+    <a href="contact.html">聯絡我們</a> |
+    <a href="terms.html">使用條款</a> |
+    <a href="privacy.html">隱私權政策</a>
+  </p>
 </footer>
 
 </body>
