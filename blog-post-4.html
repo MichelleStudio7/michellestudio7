@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdMob + Facebook Audience Network 中介整合教學</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #34495e;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    pre {
+      background: #eee;
+      padding: 0.5rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Michelle Studio 技術筆記</h1>
+  </header>
+  <nav>
+    <a href="index.html">首頁</a> |
+    <a href="blogpost.html">技術筆記</a> |
+    <a href="about.html">關於Michelle.Studio</a> |
+    <a href="contact.html">聯絡資訊</a> |
+    <a href="terms.html">服務條款</a> |
+    <a href="privacy.html">隱私權政策</a>
+  </nav>
+
+  <div class="container">
+    <h2>AdMob + Facebook Audience Network 中介整合教學</h2>
+    <p><em>發佈日期：2025-07-31</em></p>
+
+    <p>若你希望在 Android App 中同時導入 Google AdMob 與 Facebook Audience Network 廣告，透過 AdMob 的「中介服務（Mediation）」是最有效方式。</p>
+
+    <h3>步驟 1：設定 AdMob 中介群組</h3>
+    <p>登入 <a href="https://admob.google.com">AdMob 後台</a> → 建立中介群組 → 新增 Facebook 為來源。</p>
+
+    <h3>步驟 2：整合 Audience Network SDK</h3>
+    <p>在 <code>build.gradle</code> 中加入：</p>
+    <pre><code>implementation 'com.facebook.android:audience-network-sdk:6.16.0'</code></pre>
+
+    <h3>步驟 3：導入 Facebook Adapter</h3>
+    <p>透過 Gradle 加入：</p>
+    <pre><code>implementation 'com.google.ads.mediation:facebook:6.16.0.0'</code></pre>
+
+    <h3>步驟 4：廣告單元設定</h3>
+    <p>確認 AdMob 與 Facebook 的 Placement ID 都正確設定在中介服務中。</p>
+
+    <h3>補充</h3>
+    <ul>
+      <li>記得在 AndroidManifest.xml 中加入必要權限</li>
+      <li>測試時請使用測試廣告 ID</li>
+    </ul>
+
+    <p>完成以上步驟後，就能透過 AdMob 彈性分配廣告流量到 Facebook Audience Network。</p>
+
+    <p><a href="index.html">← 返回首頁</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Michelle Studio 技術筆記
+  </footer>
+</body>
+</html>
