@@ -122,22 +122,6 @@ classpath 'com.google.gms:google-services:4.3.15'</code></pre>
 implementation 'com.google.android.gms:play-services-ads:23.0.0'
 apply plugin: 'com.google.gms.google-services'</code></pre>
 
-    <!-- Facebook Audience Network 原生廣告 -->
-    <div class="ad-placeholder" id="fan-native-ad">
-      <div class="ad-label">— Facebook 廣告 —</div>
-      <div class="fb-ad" 
-           data-placementid="1090686826303052_1101398821898519"
-           data-format="native"
-           data-testmode="true"
-           style="width:100%; height:100px;"></div>
-    </div>
-    <script>
-      window.fbAsyncInit = function () {
-        FBAds.init("1090686826303052"); // app ID
-        FBAds.loadAds();
-      };
-    </script>
-
     <h2>步驟 4：初始化廣告 SDK</h2>
     <pre><code class="language-java">MobileAds.initialize(this, initializationStatus -> {});</code></pre>
 
@@ -155,8 +139,24 @@ apply plugin: 'com.google.gms.google-services'</code></pre>
 AdRequest adRequest = new AdRequest.Builder().build();
 adView.loadAd(adRequest);</code></pre>
 
-    <p>完成基本的 AdMob 整合流程。</p>
+    <p>完成基本的 AdMob 整合流程。</p>    
     <p><a href="index.html">返回首頁</a></p>
+
+    <!-- Facebook Audience Network 原生廣告 -->
+    <div class="ad-placeholder" id="fan-native-ad">
+      <div class="ad-label">— Facebook 廣告 —</div>
+      <div class="fb-ad" 
+           data-placementid="1090686826303052_1101398821898519"
+           data-format="native"
+           data-testmode="true"
+           style="width:100%; height:100px;"></div>
+    </div>
+    <script>
+      window.fbAsyncInit = function () {
+        FBAds.init("1090686826303052"); // app ID
+        FBAds.loadAds();
+      };
+    </script>
   </div>
 
   <footer>
