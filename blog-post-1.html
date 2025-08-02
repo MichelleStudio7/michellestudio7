@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="在 Android App 中整合 Google AdMob 廣告的完整教學" />
+  <title>如何在 Android App 中整合 Google AdMob 廣告</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; margin: 0; background: #f4f4f4; color: #333; }
+    header, footer { background-color: #2c3e50; color: #fff; padding: 1rem; text-align: center; }
+    nav { background-color: #34495e; text-align: center; padding: 0.5rem; }
+    nav a { color: #fff; text-decoration: none; margin: 0 1rem; }
+    .container { max-width: 850px; margin: 2rem auto; padding: 0 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h1 { margin-top: 0; }
+    .ad-placeholder { background: #eee; color: #888; padding: 1rem; text-align: center; margin: 2rem 0; border: 1px dashed #bbb; }
+    code { background: #eee; padding: 0.2rem 0.4rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Michelle Studio 技術筆記</h1>
+  </header>
+  <nav>
+    <a href="index.html">首頁</a> |
+    <a href="blogpost.html">技術筆記</a> |
+    <a href="about.html">關於Michelle.Studio</a> |
+    <a href="contact.html">聯絡資訊</a> |
+    <a href="terms.html">服務條款</a> |
+    <a href="privacy.html">隱私權政策</a>
+  </nav>
+
+  <div class="container">
+    <h1>如何在 Android App 中整合 Google AdMob 廣告</h1>
+    <p><strong>作者：</strong>Michelle Liu ｜ <strong>發布日期：</strong>2025-08-02</p>
+
+    <div class="ad-placeholder">
+      <!-- AdSense 廣告區塊 -->
+      預留廣告區（建議放置 Banner 廣告）
+    </div>
+
+    <p>在 Android App 中加入 Google AdMob 廣告可以幫助你從免費應用程式中獲得收益。本篇文章將引導你完成從 AdMob 註冊到整合廣告 SDK 的完整流程。</p>
+
+    <h2>步驟 1：建立 AdMob 帳戶</h2>
+    <p>前往 <a href="https://admob.google.com/">admob.google.com</a> 並註冊帳戶。完成帳號驗證與 App 建立。</p>
+
+    <h2>步驟 2：在 Firebase 註冊 App 並啟用 Analytics</h2>
+    <p>AdMob 廣告整合需搭配 Firebase 使用，請先前往 Firebase 控制台建立專案並加入你的 App。</p>
+
+    <h2>步驟 3：加入 SDK</h2>
+    <pre><code class="language-groovy">// build.gradle (project)
+classpath 'com.google.gms:google-services:4.3.15'</code></pre>
+    <pre><code class="language-groovy">// build.gradle (app)
+implementation 'com.google.android.gms:play-services-ads:23.0.0'
+apply plugin: 'com.google.gms.google-services'</code></pre>
+
+    <div class="ad-placeholder">
+      <!-- 插頁式廣告位置 -->
+      可放置插頁式廣告的區域
+    </div>
+
+    <h2>步驟 4：初始化廣告 SDK</h2>
+    <pre><code class="language-java">MobileAds.initialize(this, initializationStatus -> {});</code></pre>
+
+    <h2>步驟 5：插入 Banner 廣告</h2>
+    <p>在 XML 中加入：</p>
+    <pre><code class="language-xml">&lt;com.google.android.gms.ads.AdView
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    ads:adSize="BANNER"
+    ads:adUnitId="ca-app-pub-xxxxxxxxxxxxx/xxxxxxxxxx" /&gt;</code></pre>
+
+    <p>並在 Java 檔中載入廣告：</p>
+    <pre><code class="language-java">AdView adView = findViewById(R.id.adView);
+AdRequest adRequest = new AdRequest.Builder().build();
+adView.loadAd(adRequest);</code></pre>
+
+    <p>完成基本的 AdMob 整合流程。</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Michelle Studio 技術筆記
+  </footer>
+</body>
+</html>
